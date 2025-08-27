@@ -32,3 +32,16 @@ Print('Hello')
 # META   "language": "python",
 # META   "language_group": "synapse_pyspark"
 # META }
+
+# CELL ********************
+
+df = spark.read.format("csv").option("header","true").load("abfss://FeatureWsp@onelake.dfs.fabric.microsoft.com/dataHouse1.Lakehouse/Files/sales.csv")
+# df now is a Spark DataFrame containing CSV data from "abfss://FeatureWsp@onelake.dfs.fabric.microsoft.com/dataHouse1.Lakehouse/Files/sales.csv".
+display(df)
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
